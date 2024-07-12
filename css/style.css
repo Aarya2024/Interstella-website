@@ -13935,7 +13935,8 @@ body {
 }
 
 body {
-  background-image: url('E:/HTML/interstella/meyawo-1.0.0/clark-master/images/galaxy.jpeg');
+  
+  background-image: url('images/galaxy.jpeg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
