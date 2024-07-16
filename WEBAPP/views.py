@@ -18,14 +18,18 @@ def quiz():
         studentContactNumber=request.form.get('contact')
         emailAddress=request.form.get('email')
         studentSelectedLocation=request.form.get('location')
-        
-        new_student=User(studentName=studentName,schoolName=schoolName,studentAge=studentAge,studentContactNumber=studentContactNumber,emailAddress=emailAddress,studentSelectedLocation=studentSelectedLocation)
-        db.session.add(new_student)
-        db.session.commit()
-        return render_template("index.html")
+        if len(studentContactNumber)>10 and len(studentContactNumber)<0:
+            flash("Invalid Contact Number",category='error')
+        else:
+            new_student=User(studentName=studentName,schoolName=schoolName,studentAge=studentAge,studentContactNumber=studentContactNumber,emailAddress=emailAddress,studentSelectedLocation=studentSelectedLocation)
+            db.session.add(new_student)
+            try:
+                db.session.commit()
+            except Exception as e:
+                print(e)
+                flash("Email is already registered")
+                return render_template("quiz.html")
 
-
-
-        
-
+            flash("User Successfully Registered!.")
+            # Add Payment Here
     return render_template("quiz.html") 

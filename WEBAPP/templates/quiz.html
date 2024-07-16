@@ -82,8 +82,15 @@
     </style>
 </head>
 <body>
+    
     <div class="container">
         <h2>Register for the Spectrum Space Quiz</h2>
+        <!-- Printing Flash Messeages -->
+        {% for mesg in get_flashed_messages() %}
+        <!-- Add style to this -->
+            <h2 style:color ;">{{ mesg }}</h2>
+        {% endfor %}
+        <!--  -->
         <form method="POST">
             <div class="form-group">
                 <label for="fullName">Full Name</label>
