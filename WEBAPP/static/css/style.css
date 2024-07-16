@@ -13936,7 +13936,7 @@ body {
 
 body {
   
-  background-image: url('images/galaxy.jpeg'); 
+  background-image: url("../images/paper.jpg"); 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -13947,4 +13947,11 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
 }
