@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(cosmoscosmos-1853491.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 5rem;
+  text-shadow: 2px 2px 0px #78849c,
+    -2px -2px 0px #3ABEF9,
+    -2px 2px 0px #3ABEF9,
+    2px -2px 0px #5e8395, 0px 0px 28px #ffffffab;
+  padding: 0px 0px;
+  margin: 0.05rem 0px;
+
+}
+
+.selector {
+  text-align: center;
+  padding: 20px;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.form-container {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  display: none;
+  margin: -3rem auto;
+  width: 30rem;
+  background-color: rgb(15, 15, 15);
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+  margin-bottom: 4rem;
+  padding-bottom: 0.3rem;
+
+
+
+}
+
+.form-container:hover {
+  background-blend-mode: screen;
+  background-color: #151515c4;
+  box-shadow: 0px 0px 20px #ffffff1c;
+  border: 1px solid rgba(255, 255, 255, 0.222);
+
+}
+
+.form-container h2 {
+  text-align: center;
+  color: white;
+}
+
+.form-container form {
+  background-color: #1f1f1f;
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  padding: 10px 30px;
+  background-blend-mode: screen;
+
+}
+.form-container form:hover{
+  background-color: #3434345d;
+  
+}
+form {
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  background-blend-mode: screen;
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+
+}
+form:hover{
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.108);
+  border: 1px solid rgba(255, 255, 255, 0.329);
+
+}
+input{
+  margin: 0.5rem;
+  font-size: 0.9rem;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+button {
+  width: 100%;
+  background-color: #878787;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 1px;
+  font-weight: bold;
+}
+
+input,
+label {
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+
+
+.selector {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+
+#selecttext {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+}
+
+#location {
+  border-radius: 20px;
+  text-align: center;
+  background: rgb(15, 15, 15);
+  color: white;
+  padding: 0.8rem 0px;
+  margin: 2rem 0px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.1rem;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+#location:hover {
+  background-color: rgb(39, 39, 39);
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.192);
+
+}
+
+span {
+  z-index: -9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: animate 3s linear infinite;
+
+}
+
+span::before {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffffa3, transparent);
+
+}
+
+
+@keyframes animate {
+
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+
+}
+
+span:nth-child(1) {
+  top: 0;
+  right: 0;
+  animation-delay: 0s;
+  animation-duration: 1.9s;
+}
+
+span:nth-child(2) {
+  top: 0;
+  right: 80px;
+  left: initial;
+
+  animation-delay: 0.2s;
+  animation-duration: 2s;
+}
+
+span:nth-child(3) {
+  top: 80px;
+  right: 0;
+  left: initial;
+
+  animation-delay: 0.4s;
+  animation-duration: 3.4s;
+}
+
+span:nth-child(4) {
+  top: 0;
+  right: 180px;
+  left: initial;
+
+  animation-delay: 0.6s;
+  animation-duration: 3s;
+}
+
+span:nth-child(5) {
+  top: 0;
+  right: 400px;
+  left: initial;
+
+  animation-delay: 0.8s;
+  animation-duration: 6s;
+}
+
+span:nth-child(6) {
+  top: 0;
+  right: 600px;
+  left: initial;
+
+  animation-delay: 1s;
+  animation-duration: 1.75s;
+}
+
+span:nth-child(7) {
+  top: 300px;
+  right: 0;
+  left: initial;
+
+  animation-delay: 1.2s;
+  animation-duration: 5s;
+}
+
+span:nth-child(8) {
+  top: 0;
+  right: 700px;
+  left: initial;
+
+  animation-delay: 1.4s;
+  animation-duration: 1s;
+}
+
+span:nth-child(9) {
+  top: 0;
+  right: 1000px;
+  left: initial;
+
+  animation-delay: 0.75s;
+  animation-duration: 2s;
+}
+
+span:nth-child(10) {
+  top: 0;
+  right: 450px;
+  left: initial;
+
+  animation-delay: 2.75s;
+  animation-duration: 4s;
+}
+
+
+#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(15, 15, 15);
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (max-width: 565px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+  html{
+    overflow-x: hidden;
+  }
+}
+
