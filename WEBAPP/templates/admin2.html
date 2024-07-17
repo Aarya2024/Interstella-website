@@ -1,0 +1,31 @@
+<h4>Registrations for NSA-MUN </h4>
+<table class='paleBlueRows' style="border: 5px; ">
+  <tr>
+      <td>Id</td>
+      <td>studentName</td>
+      <td>schoolName</td>
+      <td>studentAge</td>
+      <td>studentContactNumber</td>
+      <td>emailAddress</td>
+      <td>Collage</td>
+      <td>committee</td>
+      <td>Venue</td>
+      <td>Location</td>
+      <td>paymentStatus</td>
+  </tr>
+  {%for user in users%}
+  <tr>
+      <td>{{user.id}}</td>
+      <td>{{user.studentName}}</td>
+      <td>{{user.schoolName}}</td>
+      <td>{{user.studentAge}}</td>
+      <td>{{user.studentContactNumber}}</td>
+      <td>{{user.emailAddress}}</td>
+      <td>{{user.studentcollag}}</td>
+      <td>{{user.studentcommittee}}</td>
+      <td>{{user.studentplace}}</td>
+      <td>{{user.studentSelectedLocation}}</td>
+      <td>{{user.paymentStatus}}</td>
+  </tr>
+  {%endfor%}
+</table>
