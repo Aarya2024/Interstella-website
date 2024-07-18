@@ -12,4 +12,4 @@ def admin():
 def admin2():
     data=NSAMUN.query.all()
     print(data)
-    return render_template('admin.html',users=data)
+    return render_template('admin2.html',users=data)

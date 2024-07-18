@@ -39,25 +39,23 @@ def nsamun():
             
             #if N_studentSelectedLocation == 'nagpur':
                 N_studentName=request.form.get('name')
-                N_schoolName=request.form.get('school')
                 N_studentAge=request.form.get('age')
                 N_studentContactNumber=request.form.get('phone')
                 N_emailAddress=request.form.get('email')
                 N_collegeName=request.form.get('college')
                 N_committee=request.form.get('committee')
-                N_studentSelectedLocation=request.form.get('location')
-                N_place=request.form.get('place')
+                #N_studentSelectedLocation=request.form.get('location')
+                N_place=request.form.get('Location')
               
                 new_N_student=NSAMUN(
-                                     studentName=N_studentName,
-                                     schoolName=N_schoolName,
-                                     studentAge=N_studentAge,
-                                     studentContactNumber=N_studentContactNumber,
-                                     emailAddress=N_emailAddress,
-                                     studentSelectedLocation=N_studentSelectedLocation,
-                                     studentcollage=N_collegeName,
-                                     studentcommittee = N_committee,
-                                     studentplace = N_place )               
+                                     N_studentName=N_studentName,
+                                     N_studentAge=N_studentAge,
+                                     N_studentContactNumber=N_studentContactNumber,
+                                     N_emailAddress=N_emailAddress,
+                                     #N_studentSelectedLocation=N_studentSelectedLocation,
+                                     N_studentcollage=N_collegeName,
+                                     N_studentcommittee = N_committee,
+                                     N_studentplace = N_place )               
                 db.session.add(new_N_student)
                 try :
                     db.session.commit()
