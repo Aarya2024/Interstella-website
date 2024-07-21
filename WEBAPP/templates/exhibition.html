@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exhibition Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+            padding: 20px;
+            background-image: url("images/paper.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            color: azure;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="number"],
+            select {
+                font-size: 14px;
+            }
+        }
+
+        .h2-wrapper {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+
+
+        h2 {
+            text-align: center;
+            color: #333;
+            background-color: azure;
+            border-radius: 25px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h2-wrapper">
+        <h2>Exhibition Registration Form</h2>
+    </div>
+    <form id="exhibitionForm" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="school">School Name:</label>
+        <input type="text" id="school" name="school" required><br><br>
+
+        <label for="teamMembersCount">Number of Team Members (excluding yourself):</label>
+        <br>
+
+        <div id="teamMembers">
+            <label for="teamMember1">Team Member 1:</label>
+            <input type="text" id="teamMember1" name="teamMember1"><br><br>
+
+            <label for="teamMember2">Team Member 2:</label>
+            <input type="text" id="teamMember2" name="teamMember2"><br><br>
+
+            <label for="teamMember3">Team Member 3:</label>
+            <input type="text" id="teamMember3" name="teamMember3"><br><br>
+
+
+        </div>
+
+        <label for="model">Model Name:</label>
+        <input type="text" id="model" name="model" required><br><br>
+
+
+
+        <button type="submit">Pay Now</button>
+    </form>
+</body>
+
+</html>
