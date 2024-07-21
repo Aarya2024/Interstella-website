@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Registration Form</title>
+    <link rel="stylesheet" href="Hackathon_Registration_Form.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hackathon Registration Form</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="teamName">Team Name:</label>
+                <input class="text" type="text" id="teamName" name="teamName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Team Email:</label>
+                <input class="text" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Team Phone Number:</label>
+                <input class="text" type="text" id="phone" name="phone" maxlength="10" pattern="\d{10}"
+                    title="Please enter a 10-digit phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Hackathon Location:</label>
+                <div class="select" tabindex="1">
+                    <input class="selectopt" name="test" type="radio" id="opt1" checked>
+                    <label for="opt1" class="option">Nagpur </label>
+                    <input class="selectopt" name="test" type="radio" id="opt2">
+                    <label for="opt2" class="option">Pune</label>
+                    <input class="selectopt" name="test" type="radio" id="opt3">
+                    <label for="opt3" class="option">Kolhapur</label>
+                    <input class="selectopt" name="test" type="radio" id="opt4">
+                    <label for="opt4" class="option">Nanded</label>
+                    <input class="selectopt" name="test" type="radio" id="opt5">
+                    <label for="opt5" class="option">Goa</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Number of Team Members:</label>
+                <div class="button-group">
+                    <button type="button" onclick="createMemberFields(2)">2 Members</button>
+                    <button type="button" onclick="createMemberFields(3)">3 Members</button>
+                    <button type="button" onclick="createMemberFields(4)">4 Members</button>
+                </div>
+            </div>
+            <div id="membersContainer" class="form-group"></div>
+            <div class="form-group submit-button">
+                <button type="submit">Proceed to Payment</button>
+            </div>
+        </form>
+        <div id="successMessage" class="hidden">Registration Successful!</div>
+    </div>
+    <footer>
+        <p>copyright &copy; 2024. All rights reserved.</p>
+    </footer>
+    <script src="Hackathon_Registration_Form.js"></script>
+</body>
+
+</html>
